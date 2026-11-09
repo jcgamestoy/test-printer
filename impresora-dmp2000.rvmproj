@@ -1,0 +1,14 @@
+{
+  "name": "impresora-dmp2000",
+  "rvmproj_version": "1.0.0",
+  "version": "1.0.0",
+  // build.js compila los dos programas y escribe los discos y cintas para cargarlos en RVM3 con la impresora conectada.
+  "configs": {
+    "release": { "scripts": ["build.js"], "data": {} }
+  },
+  // Los objetivos cargan cada programa en su maquina (en Retro Studio no hay impresora: sirven para probar los menus).
+  "targets": {
+    "cpc6128": { "machine": "Amstrad CPC 6128", "scripts": ["run-cpc.js"] },
+    "plus3": { "machine": "ZX Spectrum +3", "scripts": ["run-zx.js"] }
+  }
+}
